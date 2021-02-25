@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="vendor/all.css" />
+    <!-- <link rel="stylesheet" href="vendor/reset.css" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Delius+Unicase&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <title>Journey Away</title>
+  </head>
+  <script
+    src="http://code.jquery.com/jquery-2.2.3.min.js"
+    integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="vendor/all.js"></script>
+  <body>
+    <!-- Home image with navigation bar-->
+    <nav>
+      <div class="menu-bar">
+        <div class="logo"><a href="#">Journey Away</a></div>
+        <div class="sub-menu">
+          <span><a href="#amenities">About</a></span>
+          <span><a href="#packages">Packages</a></span>
+          <span><a href="#locations">Locations</a></span>
+          <span id="cart" data-totalitems="0" class="cart"
+            ><i class="fas fa-shopping-cart"></i
+          ></span>
+        </div>
+      </div>
+    </nav>
+    <div class="png1">
+      <div class="ptext">
+        <span class="border">Your Dream Vacation Awaits</span>
+      </div>
+      <a href="#amenities"><div class="arrow"></div></a>
+    </div>
+    <!-- Amenities Section -->
+    <section class="section section-light" id="amenities">
+      <h2>What Makes Journey Away the Best?</h2>
+      <div class="amenities">
+        <div class="amenities-background">
+          <h3>Best Prices <i class="fas fa-tag"></i></h3>
+          <p>
+            Ask anyone around! Journey Away always strives to maintain the most
+            affordable prices so you can enjoy your vacation stress-free!
+          </p>
+        </div>
+        <div>
+          <div class="amenities-background">
+            <h3>Custom Itineraries <i class="fas fa-suitcase"></i></h3>
+            <p>
+              We keep our customers in mind! A custom itinerary is designed to
+              eliminate the stress and worry of planning a destination vacation
+              while saving you valuable time and money.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="amenities-background">
+            <h3>Lavish Destinations <i class="fas fa-passport"></i></h3>
+            <p>
+              With offer services in over 15 destinations in 6 continents so you
+              can get a glimpse of the world's beautiful sights!
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="amenities-background">
+            <h3>Cozy Accommodations <i class="fas fa-hotel"></i></h3>
+            <p>
+              We ensure all our partner hotels, resorts, and Airbnbs are of
+              superb quality and offer great amenities for you to enjoy your
+              stay!
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="amenities-background">
+            <h3>Trusted Agents <i class="fas fa-user-shield"></i></h3>
+            <p>
+              Our trusted agents are vetted and have much experience providing
+              our guests with their dream vacations!
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="amenities-background">
+            <h3>24/7 Support <i class="fas fa-clock"></i></h3>
+            <p>
+              We will always be there for you when you need us, 24/7! Call our
+              support number whenever you need assistance on your vacation at
+              1-800-123-4567.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="png2">
+      <div class="ptext">
+        <span class="border">ROME</span>
+      </div>
+    </div>
+    <!-- Packages section -->
+    <section class="section section-dark">
+      <h2>Rates</h2>
+      <div class="packages" id="packages">
+        <div class="packages-background bronze">
+          <h3>BRONZE</h3>
+          <h4>$239 per consultation</h4>
+          <h5>
+            Includes custom itinerary and consultations with our travel agents.
+          </h5>
+          <button id="addtocart" onclick="addToCartAlertB()">
+            Add to Cart <i class="fas fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="packages-background gold">
+          <h3>GOLD</h3>
+          <h4>$339 per consultation</h4>
+          <h5>
+            Includes custom itinerary and consultations with our travel agents
+            plus resort specials.
+          </h5>
+          <button id="addtocart" onclick="addToCartAlertG()">
+            Add to Cart <i class="fas fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="packages-background platinum">
+          <h3>PLATINUM</h3>
+          <h4>$439 per consultation</h4>
+          <h5>
+            Includes custom itinerary plus resort specials, rental car packages,
+            tours, and more!
+          </h5>
+          <button id="addtocart" onclick="addToCartAlertP()">
+            Add to Cart <i class="fas fa-cart-plus"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="png3">
+      <div class="ptext">
+        <span class="border">THAILAND</span>
+      </div>
+    </div>
+    <!-- Listing of locations section -->
+    <section class="section section-light">
+      <h2>Where Would You Like to Go?</h2>
+      <div class="locations" id="locations">
+        <div class="location-circle">Rome<img src="img/athens.jpg" /></div>
+        <div class="location-circle stagger">
+          Thailand<img src="img/waterfall.jpg" />
+        </div>
+        <div class="location-circle">Belize<img src="img/lake.jpg" /></div>
+        <div class="location-circle stagger">
+          Iceland<img src="img/iceland.jpg" />
+        </div>
+        <div class="location-circle">
+          South Africa<img src="img/southafrica.jpg" />
+        </div>
+        <div class="location-circle stagger">
+          Mexico<img src="img/mexico.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <div class="png4">
+      <div class="ptext">
+        <span class="border">BELIZE</span>
+      </div>
+    </div>
+  </body>
+</html>
